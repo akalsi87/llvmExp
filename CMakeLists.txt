@@ -13,6 +13,8 @@ set(PROJ_README_FILE  README.txt)
 
 # -- Include the tests in the bin folder?
 set(INCLUDE_TEST_IN_BIN FALSE)
+set(USE_CPP 1)
+set(USE_CPP11 1)
 
 # -- Include Hunter
 include("cmake/HunterGate.cmake")
@@ -34,3 +36,5 @@ set(PROJ_SUBDIRS  unittest; doc; tools; test)
 foreach(subdir ${PROJ_SUBDIRS})
   add_subdirectory(${subdir})
 endforeach(subdir)
+
+include("test1.cmake")
